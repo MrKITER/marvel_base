@@ -5,14 +5,8 @@ import RandomChar from "../randomChar/RandomChar";
 import CharList from "../charList/CharList";
 import CharInfo from "../charInfo/CharInfo";
 
-import MarvelService from "../../services/MarvelService";
-
 import decoration from '../../resources/img/vision.png';
 import ErrorBounder from "../errorBounder/ErrorBounder";
-
-const marvelService = new MarvelService();
-
-marvelService.getAllCharacters().then(res => console.log(res));
 
 const App = () => {
 
@@ -29,14 +23,14 @@ const App = () => {
                 <ErrorBounder>
                     <RandomChar/>
                 </ErrorBounder>
-                <div className="char__content">
+{/*                 <div className="char__content">
                     <ErrorBounder>
                         <CharList onUpdateChar={onUpdateChar}/>
                     </ErrorBounder>
                     <ErrorBounder>
                         <CharInfo charId={selectedCharId}/>
                     </ErrorBounder>
-                </div>
+                </div> */}
                 <img className="bg-decoration" src={decoration} alt="vision"/>
             </main>
         </div>
